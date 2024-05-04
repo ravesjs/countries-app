@@ -1,11 +1,11 @@
-# 📦 Webpack, scss-modules, postcss, babel, eslint, prettier configuration, React-ready template.
+# Приложение для демонстрации данных, полученных из API сервиса
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Instruction
 
 1. Clone this repo 
     ```bash
-    git clone https://github.com/ravesjs/config-webpack-etc
+    git clone https://github.com/ravesjs/countries-app
     ```
      
 2.  Delete old link (of this repo)

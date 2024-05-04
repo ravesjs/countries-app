@@ -1,0 +1,31 @@
+.container {
+	margin-top: 70px;
+}
+
+h2 {
+	text-align: center;
+}
+
+ul > li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+li > img {
+	margin-right: 5px;
+}
+
+.countryBlock {
+  width: 20%;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px; 
+}
+
+@media (max-width: 768px) {
+  .country-block {
+    width: 50%;
+  }
+}
