@@ -1,5 +1,5 @@
 # Приложение для демонстрации данных, полученных из API сервиса
-![App](https://github.com/ravesjs/countries-app/blob/main/img/countries.png)
+![App](https://github.com/ravesjs/countries-app/blob/main/img/countriesApp.png)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Instruction
