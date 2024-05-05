@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 const CountryList = () => {
   const [countries, setCountries] = useState([])
-
   useEffect(() => {
     axios
       .get('https://restcountries.com/v3.1/all')
@@ -22,17 +21,19 @@ const CountryList = () => {
     <Container>
       <h2>List of Countries</h2>
       <Row className={styles.container}>
-        {countries.sort((a, b) => {
-          if (a.name.common < b.name.common) return -1;
-          if (a.name.common > b.name.common) return 1;
-          return 0;
-        }).map((country) => (
-          <div key={country.name.common} className={styles.countryBlock}>
-            <Link to={`/country/${country.name.common}`}>
-              <p>{country.name.common}</p>
-            </Link>
-          </div>
-        ))}
+        {countries
+          .sort((a, b) => {
+            if (a.name.common < b.name.common) return -1
+            if (a.name.common > b.name.common) return 1
+            return 0
+          })
+          .map((country) => (
+            <div key={country.name.common} className={styles.countryBlock}>
+              <Link to={`/country/${country.name.common}`}>
+                <p>{country.name.common}</p>
+              </Link>
+            </div>
+          ))}
       </Row>
     </Container>
   )

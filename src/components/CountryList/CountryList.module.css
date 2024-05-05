@@ -1,15 +1,15 @@
 .container {
-	justify-content: center;
+  justify-content: center;
   flex-wrap: wrap;
-	display: grid;
+  display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 8px;
-	margin-left: 150px;
+  margin-left: 10px;
 }
 
 h2 {
   text-align: center;
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 li > img {
@@ -17,6 +17,7 @@ li > img {
 }
 
 .countryBlock {
+  text-align: center;
   background-color: #f0f0f0;
   box-sizing: border-box;
   padding: 10px;
@@ -24,11 +25,14 @@ li > img {
   padding: 15px;
   trainsition: all 0.3 ease;
   margin: 8px;
-	width: 200px;
-	height: 50px;
-	overflow: hidden;
+  padding: 12px;
+  width: 350px;
+  height: 50px;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 .countryBlock a {
   text-decoration: none;
   color: inherit;
