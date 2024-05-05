@@ -1,4 +1,5 @@
 # Приложение для демонстрации данных, полученных из API сервиса
+![App](https://github.com/ravesjs/countries-app/blob/main/img/countries.png)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Instruction
@@ -8,36 +9,9 @@
     git clone https://github.com/ravesjs/countries-app
     ```
      
-2.  Delete old link (of this repo)
-    ```bash
-    git remote remove origin  
-    ```
-3. Initialize   
-    ```bash
-    git init
-    ```
-    
-    ```bash
-    git add .
-    ```
-    
-    ```bash
-    git commit -m 'smth'
-    ```
-    
- 4. Create a new repo on github for yourself  
-    
-    ```bash
-    git remote add origin <URL-of-your-repository>  
-    ```
- 5. Push changes   
-    ```bash
-    git push -u origin main
-    ```
-    
     ## Installation
     
-    Install package.json devDependencies  
+    Install dependencies
     ```bash
     npm install
     ```
@@ -52,8 +26,6 @@
     ```bash
     npm run build
     ```
-
-- props to [Tania Rascia](https://github.com/taniarascia), I've updated [this](https://github.com/taniarascia/webpack-boilerplate) config for React and scss.modules
 
   ## License
 
