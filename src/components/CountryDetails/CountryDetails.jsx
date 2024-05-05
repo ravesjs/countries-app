@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import styles from './CountryDetails.module.css'
-import { Container, Row, Col, Image } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const CountryDetails = () => {
   const { countryName } = useParams()
@@ -36,7 +36,11 @@ const CountryDetails = () => {
         </Col>
         <Col sm={6} className="d-flex justify-content-center align-items-center">
           <div className="image-wrapper">
-					<img src={countryDetails.flags.png} alt={countryDetails.name.common} className="img-fluid" />
+            <img
+              src={countryDetails.flags.png}
+              alt={countryDetails.name.common}
+              className="img-fluid"
+            />
           </div>
         </Col>
       </Row>
