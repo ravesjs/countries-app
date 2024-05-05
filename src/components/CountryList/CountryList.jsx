@@ -19,10 +19,14 @@ const CountryList = () => {
   }, [])
 
   return (
-    <Container className="mt-4">
+    <Container>
       <h2>List of Countries</h2>
-      <Row>
-        {countries.map((country) => (
+      <Row className={styles.container}>
+        {countries.sort((a, b) => {
+          if (a.name.common < b.name.common) return -1;
+          if (a.name.common > b.name.common) return 1;
+          return 0;
+        }).map((country) => (
           <div key={country.name.common} className={styles.countryBlock}>
             <Link to={`/country/${country.name.common}`}>
               <p>{country.name.common}</p>
