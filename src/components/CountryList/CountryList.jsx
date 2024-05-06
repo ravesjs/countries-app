@@ -29,7 +29,7 @@ const CountryList = () => {
           })
           .map((country) => (
             <div key={country.name.common} className={styles.countryBlock}>
-              <Link to={`/country/${country.name.common}`}>
+              <Link to={`/${country.name.common}`}>
                 <p>{country.name.common}</p>
               </Link>
             </div>
