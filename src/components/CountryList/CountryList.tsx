@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import axios from 'axios'
 import styles from './CountryList.module.css'
 import { Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const CountryList = () => {
-  const [countries, setCountries] = useState([])
+interface ICountry {
+  name: {
+    common: string
+  }
+}
+const CountryList: FC = () => {
+  const [countries, setCountries] = useState<ICountry[]>([])
+
   useEffect(() => {
     axios
-      .get('https://restcountries.com/v3.1/all')
+      .get<ICountry[]>('https://restcountries.com/v3.1/all')
       .then((response) => {
         setCountries(response.data)
       })

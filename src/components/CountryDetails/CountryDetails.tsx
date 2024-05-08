@@ -1,16 +1,30 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import styles from './CountryDetails.module.css'
 import { Container, Row, Col } from 'react-bootstrap'
 
-const CountryDetails = () => {
-  const { countryName } = useParams()
-  const [countryDetails, setCountryDetails] = useState(null)
+interface ICountryDetails {
+  name: {
+    common: string
+  }
+  capital: string
+  region: string
+  population: number
+  area: number
+  languages: { [key: string]: string }
+  flags: {
+    png: string
+  }
+}
+
+const CountryDetails: FC = () => {
+  const { countryName } = useParams<{ countryName: string }>()
+  const [countryDetails, setCountryDetails] = useState<ICountryDetails | null>(null)
 
   useEffect(() => {
     axios
-      .get(`https://restcountries.com/v3.1/name/${countryName}`)
+      .get<ICountryDetails[]>(`https://restcountries.com/v3.1/name/${countryName}`)
       .then((response) => {
         setCountryDetails(response.data[0])
       })

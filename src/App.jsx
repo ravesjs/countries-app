@@ -5,13 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CountryDetails from './components/CountryDetails/CountryDetails'
 
 function App() {
+  
   return (
     <Router>
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<CountryList />} />
-          <Route path=":countryName" element={<CountryDetails />} />
+          <Route path=':countryName' element={<CountryDetails />} />
         </Routes>
       </main>
     </Router>

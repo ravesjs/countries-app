@@ -6,7 +6,7 @@ const paths = require('./paths')
 
 module.exports = {
   // Where webpack looks to start building the bundle
-  entry: [paths.src + '/index.jsx'],
+  entry: [paths.src + '/index.tsx'],
 
   // Where webpack outputs the assets and bundles
   output: {
@@ -47,7 +47,7 @@ module.exports = {
   module: {
     rules: [
       // JavaScript: Use Babel to transpile JavaScript files
-      { test: /\.[jt]sx?$/, use: ['babel-loader'] },
+      { test: /\.[jt]sx?$/, use: ['babel-loader', 'ts-loader'], exclude: /node_modules/ },
 
       // Images: Copy image files to build folder
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
