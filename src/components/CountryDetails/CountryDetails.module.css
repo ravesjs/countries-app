@@ -1,21 +1,35 @@
-.container > h2, p, img, .image-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 img {
-	display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-	margin-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 60px;
 }
 
 .loading {
-	text-align: center;
-	margin-top: 380px;
+  text-align: center;
+  margin-top: 500px;
 }
 
 .container {
-	margin-top: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 350px;
+}
+
+@media screen and (min-resolution: 125dpi) {
+  .container {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-resolution: 250dpi) {
+  .container {
+    margin-top: 10px;
+  }
 }
