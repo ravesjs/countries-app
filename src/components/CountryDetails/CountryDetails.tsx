@@ -38,7 +38,6 @@ const CountryDetails: FC = () => {
   }
 
   return (
-    <>
       <Container className={styles.container}>
         <h2>{countryDetails.name.common}</h2>
         <Row>
@@ -63,7 +62,6 @@ const CountryDetails: FC = () => {
           <button className={styles.button}>На главную</button>
         </Link>
       </Container>
-    </>
   )
 }
 
