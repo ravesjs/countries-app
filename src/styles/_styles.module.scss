@@ -17,3 +17,9 @@
 		margin-top: -20px;
   }
 }
+
+@media screen and (min-resolution: 200dpi) {
+  .header {
+    height: 40px;
+  }
+}

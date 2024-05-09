@@ -38,8 +38,20 @@ img {
   }
 }
 
-@media screen and (min-resolution: 250dpi) {
+@media screen and (min-resolution: 175dpi) {
   .container {
-    margin-top: 10px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-resolution: 200dpi) {
+  .container {
+    margin-top: -50px;
+  }
+  h2 {
+    margin-top: 20px;
+  }
+  .button {
+    margin-top: 0px;
   }
 }
