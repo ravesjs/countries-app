@@ -18,7 +18,13 @@
   }
 }
 
-@media screen and (min-resolution: 200dpi) {
+@media screen and (width > 768px) {
+  .header {
+    height: 50px;
+  }
+}
+
+@media screen and (height < 439px) {
   .header {
     height: 40px;
   }
