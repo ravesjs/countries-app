@@ -1,6 +1,12 @@
-const path = require('path')
+import path from 'path'
 
-module.exports = {
+interface Paths {
+  src: string
+  build: string
+  public: string
+}
+
+const paths: Paths = {
   // Source files
   src: path.resolve(__dirname, '../src'),
 
@@ -10,3 +16,5 @@ module.exports = {
   // Static files that get copied to build folder
   public: path.resolve(__dirname, '../public'),
 }
+
+export default paths

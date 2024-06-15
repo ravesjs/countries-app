@@ -1,10 +1,10 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import paths from './paths'
+import { Configuration } from 'webpack'
 
-const paths = require('./paths')
-
-module.exports = {
+const common: Configuration = {
   // Where webpack looks to start building the bundle
   entry: [paths.src + '/index.tsx'],
 
@@ -47,7 +47,7 @@ module.exports = {
   module: {
     rules: [
       // JavaScript: Use Babel to transpile JavaScript files
-      { test: /\.[jt]sx?$/, use: ['babel-loader', 'ts-loader'], exclude: /node_modules/ },
+      { test: /\.[jt]sx?$/, use: ['ts-loader'], exclude: /node_modules/ },
 
       // Images: Copy image files to build folder
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
@@ -66,3 +66,5 @@ module.exports = {
     },
   },
 }
+
+export default common

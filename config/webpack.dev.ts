@@ -1,8 +1,9 @@
-const { merge } = require('webpack-merge')
+import common from  './webpack.common'
+import { merge } from 'webpack-merge'
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import type { Configuration } from 'webpack'
 
-const common = require('./webpack.common')
-
-module.exports = merge(common, {
+const dev: Configuration ={
   // Set the mode to development or production
   mode: 'development',
 
@@ -16,7 +17,7 @@ module.exports = merge(common, {
     compress: true,
     hot: true,
     port: 8080,
-  },
+  } as DevServerConfiguration,
   module: {
     rules: [
       // Styles: Inject CSS into the head with source maps
@@ -34,4 +35,6 @@ module.exports = merge(common, {
       },
     ],
   },
-})
+}
+
+export default merge(common, dev)
