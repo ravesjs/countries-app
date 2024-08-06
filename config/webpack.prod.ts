@@ -24,7 +24,10 @@ const prod: Configuration = {
             options: {
               importLoaders: 2,
               sourceMap: false,
-              modules: false,
+              modules: {
+                auto: true,
+                localIdentName: '[hash:base64:5]',
+              },
             },
           },
           'postcss-loader',
