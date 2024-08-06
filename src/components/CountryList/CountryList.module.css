@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 8px;
-  margin-left: 10px;
 }
 
 h2 {
@@ -20,12 +19,10 @@ li > img {
   text-align: center;
   background-color: #f0f0f0;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
-  padding: 15px;
   trainsition: all 0.3 ease;
   margin: 8px;
-  padding: 12px;
   width: 350px;
   height: 50px;
   overflow: hidden;
@@ -40,4 +37,49 @@ li > img {
 .countryBlock:hover {
   transform: translateY(-3px);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+      margin-left: 60px;
+    }
+    .countryBlock {
+      width: 75%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    }
+    .countryBlock {
+      width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+  grid-template-columns: repeat(3, 1fr);
+  }
+  .countryBlock {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .countryBlock {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .countryBlock {
+    width: 90%;
+  }
 }
